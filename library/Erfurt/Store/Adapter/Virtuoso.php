@@ -1143,6 +1143,12 @@ class Erfurt_Store_Adapter_Virtuoso implements Erfurt_Store_Adapter_Interface, E
                 'converter'   => null,
                 'jsonEncode'  => false,
                 'queryPrefix' => ''
+            ),
+            'csv' => array(
+                'singleField' => false,
+                'converter'   => 'CSV',
+                'jsonEncode'  => false,
+                'queryPrefix' => ''
             )
         );
 
