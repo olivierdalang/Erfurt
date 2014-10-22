@@ -805,11 +805,13 @@ class Erfurt_Store_Adapter_Virtuoso implements Erfurt_Store_Adapter_Interface, E
     {
         // This is a Virtuoso commercial edition feature... If we are running on open-source version, we remove the
         // datatype, since otherwise loading will fail.
+        // It's no more in Virtuoso version 7 !
+        /*
         if ($this->_isOpenSourceVersion) {
             if ($datatype === 'http://www.openlinksw.com/schemas/virtrdf#Geometry') {
                 $datatype = null;
             }
-        }
+        }*/
 
         return Erfurt_Utils::buildLiteralString($value, $datatype, $lang, $longStringEnabled);
     }
